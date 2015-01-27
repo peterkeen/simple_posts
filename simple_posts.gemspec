@@ -8,10 +8,10 @@ Gem::Specification.new do |s|
   s.name        = "simple_posts"
   s.version     = SimplePosts::VERSION
   s.authors     = ["Pete Keen"]
-  s.email       = ["peter.keen@bugsplat.info"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of SimplePosts."
-  s.description = "TODO: Description of SimplePosts."
+  s.email       = ["pete@petekeen.net"]
+  s.homepage    = "https://github.com/peterkeen/simple_posts"
+  s.summary     = "A simple gem for adding a markdown-based blog to your Rails app."
+  s.description = "A simple gem for adding a markdown-based blog to your Rails app."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
