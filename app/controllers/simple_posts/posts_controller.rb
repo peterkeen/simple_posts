@@ -1,14 +1,16 @@
 module SimplePosts
   class PostsController < ::ApplicationController
-    before_filter :load_pages
+    before_filter :load_posts
 
     def index
       @blog_posts = @posts.blog_posts.reverse
+      render layout: SimplePosts.layout
     end
 
     def show
-      @post = @posts.find(params:id)
-      raise ActionController::RoutingError.new('Not Found') unless @ost
+      @post = @posts.find(params[:id])
+      raise ActionController::RoutingError.new('Not Found') unless @post
+      render layout: SimplePosts.layout
     end
 
     def atom

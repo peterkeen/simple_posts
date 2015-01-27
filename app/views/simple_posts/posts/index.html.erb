@@ -1,7 +1,7 @@
-<% @posts.each do |post| %>
+<% @blog_posts.each do |post| %>
   <div class="blogpost">
-    <h2 class="header"><%= link_to post.title, post_path(id: post.name) %></h2>
-    <p class="date"><%= post.short_date %></p>
+    <h2 class="blogpost-header"><%= link_to post.title, post_path(id: post.name) %></h2>
+    <p class="blogpost-date"><%= post.short_date %></p>
     <%= post.render_before_fold.html_safe %>
   </div>
   <hr>
