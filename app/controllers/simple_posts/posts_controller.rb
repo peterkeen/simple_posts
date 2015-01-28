@@ -1,3 +1,5 @@
+require 'rss'
+
 module SimplePosts
   class PostsController < ::ApplicationController
     before_filter :load_posts
