@@ -12,6 +12,12 @@ module SimplePosts
     def show
       @post = @posts.find(params[:id])
       raise ActionController::RoutingError.new('Not Found') unless @post
+
+      if request.path != post_url(id: @post.name)
+        redirect_to post_url(id: @post.name)
+        return
+      end
+
       render layout: SimplePosts.layout
     end
 
